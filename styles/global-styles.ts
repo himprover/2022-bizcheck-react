@@ -10,4 +10,8 @@ export const GlobalStyle = createGlobalStyle`
     * {
         font-family: 'Pretendard';
     }
+
+    html {
+        font-size:62.5%;
+    }
 `;

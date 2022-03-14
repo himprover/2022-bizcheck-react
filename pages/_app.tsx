@@ -1,14 +1,12 @@
+import {Layout} from 'components/common/Layout/Layout';
+
 import type {AppProps} from 'next/app';
-import {ThemeProvider} from 'styled-components';
-import {GlobalStyle} from '../styles/global-styles';
-import {lightTheme} from '../styles/theme';
 
 function MyApp({Component, pageProps}: AppProps) {
   return (
-    <ThemeProvider theme={lightTheme}>
-      <GlobalStyle />
+    <Layout>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </Layout>
   );
 }
 
