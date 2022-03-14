@@ -22,4 +22,5 @@ const StyledButton = styled.button`
   padding-left: 2rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  max-width: 10rem;
 `;
