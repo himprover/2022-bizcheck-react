@@ -1,10 +1,24 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Background} from '../Background/Background';
 
-export const BackgroundCover = () => <StyledCover />;
+export interface BackgroundCoverProps {
+  color?: string;
+  zIndex?: number;
+}
 
-const StyledCover = styled(Background)`
+export const BackgroundCover = ({color, zIndex}: BackgroundCoverProps) => (
+  <StyledCover color={color} zIndex={zIndex} />
+);
+
+const StyledCover = styled(Background)<BackgroundCoverProps>`
   z-index: -1;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: ${props =>
+    props.color ? props.color : 'rgba(0, 0, 0, 0.2)'};
+  ${props =>
+    props.zIndex
+      ? css`
+          z-index: ${props.zIndex};
+        `
+      : null}
   backdrop-filter: blur(1px);
 `;
