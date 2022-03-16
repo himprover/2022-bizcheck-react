@@ -1,12 +1,20 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {useMediaQuery} from 'react-responsive';
 
 export interface UseResponsiveProps {
-  query: string;
+  type: string;
 }
 
-export const useResponsive = ({query}: UseResponsiveProps) => {
-  const isResponsive = useMediaQuery({query: '(min-width: 425px)'});
+export const useResponsive = ({type}: UseResponsiveProps) => {
+  const [isResponsive, setIsResponsive] = useState<boolean>(false);
+  let checkMediaQuery = false;
+  if (type === 'mobile') {
+    checkMediaQuery = useMediaQuery({query: '(max-width: 425px)'});
+  }
 
-  useEffect(() => {}, [isResponsive]);
+  useEffect(() => {
+    setIsResponsive(checkMediaQuery);
+  }, [checkMediaQuery]);
+
+  return isResponsive;
 };
