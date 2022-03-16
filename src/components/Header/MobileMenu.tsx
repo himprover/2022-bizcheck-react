@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import {Icon} from 'components/common/Icon/Icon';
 import {BackgroundCover} from 'components/common/BackgroundCover/BackgroundCover';
+import Link from 'next/link';
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,11 +19,17 @@ export const MobileMenu = () => {
       </Wrap>
       {isOpen && (
         <Menu>
-          <Item>상태조회</Item>
-          <Item>진위확인</Item>
+          <Link href="/StatusCheck">
+            <Item>상태조회</Item>
+          </Link>
+          <Link href="/ValidationCheck">
+            <Item>진위확인</Item>
+          </Link>
         </Menu>
       )}
-      {isOpen && <BackgroundCover color="#00000030" zIndex={1} />}
+      {isOpen && (
+        <BackgroundCover color="#00000030" zIndex={1} onClick={clickHandler} />
+      )}
     </>
   );
 };
@@ -44,6 +51,6 @@ const Menu = styled.div`
   padding-top: 5rem;
 `;
 
-const Item = styled.div`
+const Item = styled.a`
   font-size: 2rem;
 `;

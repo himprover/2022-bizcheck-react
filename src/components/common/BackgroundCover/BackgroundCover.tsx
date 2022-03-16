@@ -1,13 +1,18 @@
 import styled, {css} from 'styled-components';
 import {Background} from '../Background/Background';
 
-export interface BackgroundCoverProps {
+export interface BackgroundCoverProps
+  extends React.HTMLAttributes<HTMLElement> {
   color?: string;
   zIndex?: number;
 }
 
-export const BackgroundCover = ({color, zIndex}: BackgroundCoverProps) => (
-  <StyledCover color={color} zIndex={zIndex} />
+export const BackgroundCover = ({
+  color,
+  zIndex,
+  onClick,
+}: BackgroundCoverProps) => (
+  <StyledCover color={color} zIndex={zIndex} onClick={onClick} />
 );
 
 const StyledCover = styled(Background)<BackgroundCoverProps>`

@@ -1,6 +1,6 @@
 import {useResponsive} from 'hooks/useResponsive';
 import styled from 'styled-components';
-import {MobileMenu} from '../MobileMenu/MobileMenu';
+import {MobileMenu} from 'components/Header/MobileMenu';
 
 export const Header = () => {
   const isMobile = useResponsive({type: 'mobile'});
