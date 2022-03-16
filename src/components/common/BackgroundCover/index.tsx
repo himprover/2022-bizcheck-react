@@ -1,5 +1,5 @@
 import styled, {css} from 'styled-components';
-import {Background} from '../Background/Background';
+import {Background} from 'components/common/Background';
 
 export interface BackgroundCoverProps
   extends React.HTMLAttributes<HTMLElement> {

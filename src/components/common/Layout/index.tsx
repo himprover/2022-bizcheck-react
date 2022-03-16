@@ -3,8 +3,8 @@ import {GlobalStyle} from 'styles/global-styles';
 import {lightTheme} from 'styles/theme';
 
 import type {ReactElement} from 'react';
-import {Header} from 'components/Header/Nav';
-import {Footer} from 'components/Footer/Footer';
+import {Header} from 'components/Header';
+import {Footer} from 'components/Footer';
 
 interface LayoutProps {
   children?: ReactElement;

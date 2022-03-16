@@ -1,4 +1,4 @@
-import {Layout} from 'components/common/Layout/Layout';
+import {Layout} from 'components/common/Layout';
 
 import type {AppProps} from 'next/app';
 

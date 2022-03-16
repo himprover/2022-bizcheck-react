@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Background} from '../Background/Background';
+import {Background} from 'components/common/Background';
 
 export interface BackgroundImageProps {
   backgroundUrl: string;

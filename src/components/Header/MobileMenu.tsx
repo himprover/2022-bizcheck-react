@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import styled from 'styled-components';
 
-import {Icon} from 'components/common/Icon/Icon';
-import {BackgroundCover} from 'components/common/BackgroundCover/BackgroundCover';
+import {Icon} from 'components/common/Icon';
+import {BackgroundCover} from 'components/common/BackgroundCover';
 import Link from 'next/link';
 
 export const MobileMenu = () => {
