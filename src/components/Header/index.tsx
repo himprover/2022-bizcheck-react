@@ -1,6 +1,8 @@
-import {useResponsive} from 'hooks/useResponsive';
 import styled from 'styled-components';
+
+import {useResponsive} from 'hooks/useResponsive';
 import {MobileMenu} from 'components/Header/MobileMenu';
+import Link from 'next/link';
 
 export const Header = () => {
   const isMobile = useResponsive({type: 'mobile'});
@@ -12,8 +14,12 @@ export const Header = () => {
         <MobileMenu />
       ) : (
         <>
-          <Item>상태조회</Item>
-          <Item>진위확인</Item>
+          <Link href="/StatusCheck">
+            <Item>상태조회</Item>
+          </Link>
+          <Link href="/ValidationCheck">
+            <Item>진위확인</Item>
+          </Link>
         </>
       )}
     </Wrap>
@@ -33,6 +39,7 @@ const Logo = styled.div`
   width: 50vw;
 `;
 
-const Item = styled.div`
+const Item = styled.a`
   font-size: 2rem;
+  cursor: pointer;
 `;

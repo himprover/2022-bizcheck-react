@@ -1,3 +1,13 @@
+import {BackgroundCover} from 'components/common/BackgroundCover';
+import {BackgroundImage} from 'components/common/BackgroundImage';
+
 export const StatusCheck = () => {
-  return <div>TEST</div>;
+  return (
+    <>
+      <BackgroundImage
+        backgroundUrl={'https://i.ibb.co/f0f4SD6/status-Check.jpg'}
+      />
+      <BackgroundCover />
+    </>
+  );
 };
