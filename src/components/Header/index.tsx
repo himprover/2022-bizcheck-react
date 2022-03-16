@@ -1,11 +1,21 @@
+import {useResponsive} from 'hooks/useResponsive';
 import styled from 'styled-components';
+import {MobileMenu} from 'components/Header/MobileMenu';
 
 export const Header = () => {
+  const isMobile = useResponsive({type: 'mobile'});
   return (
     <Wrap>
       <Logo>BizCheck</Logo>
-      <Item>상태조회</Item>
-      <Item>진위확인</Item>
+
+      {isMobile ? (
+        <MobileMenu />
+      ) : (
+        <>
+          <Item>상태조회</Item>
+          <Item>진위확인</Item>
+        </>
+      )}
     </Wrap>
   );
 };

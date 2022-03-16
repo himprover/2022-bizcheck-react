@@ -1,11 +1,11 @@
 import type {NextPage} from 'next';
+import Link from 'next/link';
 import styled from 'styled-components';
 
-import {BackgroundCover} from 'components/common/BackgroundCover/BackgroundCover';
-import {BackgroundImage} from 'components/common/BackgroundImage/BackgroundImage';
-import {Button} from 'components/common/Button/Button';
+import {BackgroundCover} from 'components/common/BackgroundCover';
+import {BackgroundImage} from 'components/common/BackgroundImage';
+import {Button} from 'components/common/Button';
 import {Title} from 'components/Home/Title';
-import Link from 'next/link';
 
 export const Home: NextPage = () => {
   return (
