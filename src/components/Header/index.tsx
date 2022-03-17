@@ -8,8 +8,9 @@ export const Header = () => {
   const isMobile = useResponsive({type: 'mobile'});
   return (
     <Wrap>
-      <Logo>BizCheck</Logo>
-
+      <Link href="/">
+        <Logo>BizCheck</Logo>
+      </Link>
       {isMobile ? (
         <MobileMenu />
       ) : (
@@ -33,10 +34,11 @@ const Wrap = styled.div`
   align-items: center;
 `;
 
-const Logo = styled.div`
+const Logo = styled.a`
   font-size: 3rem;
   font-weight: 500;
   width: 50vw;
+  cursor: pointer;
 `;
 
 const Item = styled.a`

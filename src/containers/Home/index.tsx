@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import {BackgroundCover} from 'components/common/BackgroundCover';
 import {BackgroundImage} from 'components/common/BackgroundImage';
 import {Button} from 'components/common/Button';
-import {Title} from 'components/Home/Title';
+import {Title} from 'components/common/Title';
 
 export const Home: NextPage = () => {
   return (
